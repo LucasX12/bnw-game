@@ -1,25 +1,25 @@
 {
   "characters": {
-    "lenina":    { "neutral": "characters/lenina/neutral.png", "happy": "characters/lenina/happy.png", "worried": "characters/lenina/worried.png", "upset": "characters/lenina/upset.png", "special": "characters/lenina/special.png" },
-    "bernard":   { "neutral": "characters/bernard/neutral.png", "happy": "characters/bernard/happy.png", "worried": "characters/bernard/worried.png", "upset": "characters/bernard/upset.png", "special": "characters/bernard/special.png" },
-    "helmholtz": { "neutral": "characters/helmholtz/neutral.png", "happy": "characters/helmholtz/happy.png", "worried": "characters/helmholtz/worried.png", "upset": "characters/helmholtz/upset.png", "special": "characters/helmholtz/special.png" },
-    "john":      { "neutral": "characters/john/neutral.png", "happy": "characters/john/happy.png", "worried": "characters/john/worried.png", "upset": "characters/john/upset.png", "special": "characters/john/special.png" },
-    "mond":      { "neutral": "characters/mond/neutral.png", "smile": "characters/mond/smile.png", "cold": "characters/mond/cold.png" }
+    "lenina":    { "neutral": "characters/lenina/neutral.webp", "happy": "characters/lenina/happy.webp", "worried": "characters/lenina/worried.webp", "upset": "characters/lenina/upset.webp", "special": "characters/lenina/special.webp" },
+    "bernard":   { "neutral": "characters/bernard/neutral.webp", "happy": "characters/bernard/happy.webp", "worried": "characters/bernard/worried.webp", "upset": "characters/bernard/upset.webp", "special": "characters/bernard/special.webp" },
+    "helmholtz": { "neutral": "characters/helmholtz/neutral.webp", "happy": "characters/helmholtz/happy.webp", "worried": "characters/helmholtz/worried.webp", "upset": "characters/helmholtz/upset.webp", "special": "characters/helmholtz/special.webp" },
+    "john":      { "neutral": "characters/john/neutral.webp", "happy": "characters/john/happy.webp", "worried": "characters/john/worried.webp", "upset": "characters/john/upset.webp", "special": "characters/john/special.webp" },
+    "mond":      { "neutral": "characters/mond/neutral.webp", "smile": "characters/mond/smile.webp", "cold": "characters/mond/cold.webp" }
   },
   "backgrounds": {
-    "title": "backgrounds/title.png",
-    "title_reset": "backgrounds/title_reset.png",
-    "classroom_bright": "backgrounds/classroom_bright.png",
-    "classroom_bright_drained": "backgrounds/classroom_drained.png",
-    "classroom_drained": "backgrounds/classroom_drained.png",
-    "hallway": "backgrounds/hallway.png",
-    "roof": "backgrounds/roof.png",
-    "dorm_night": "backgrounds/dorm_night.png",
-    "mond_office": "backgrounds/mond_office.png",
-    "island_shore": "backgrounds/island_shore.png",
-    "lighthouse": "backgrounds/lighthouse.png"
+    "title": "backgrounds/title.webp",
+    "title_reset": "backgrounds/title_reset.webp",
+    "classroom_bright": "backgrounds/classroom_bright.webp",
+    "classroom_bright_drained": "backgrounds/classroom_drained.webp",
+    "classroom_drained": "backgrounds/classroom_drained.webp",
+    "hallway": "backgrounds/hallway.webp",
+    "roof": "backgrounds/roof.webp",
+    "dorm_night": "backgrounds/dorm_night.webp",
+    "mond_office": "backgrounds/mond_office.webp",
+    "island_shore": "backgrounds/island_shore.webp",
+    "lighthouse": "backgrounds/lighthouse.webp"
   },
-  "ui": { "deco_frame": "ui/deco_frame.png" },
+  "ui": { "deco_frame": "ui/deco_frame.webp" },
   "music": {
     "title_theme": "audio/music/title_theme.mp3",
     "act1_loop": "audio/music/act1_loop.mp3",

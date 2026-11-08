@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-08: art added (by Claude)
+
+- Added all 34 images from ChatGPT (`ehn_art.zip`): 23 character sprites, 10 backgrounds, 1 UI ornament. All files matched the asset contract: right names, right sizes, real transparency.
+- Converted everything to WebP at full resolution: 45.0 MB down to 2.8 MB, so the game loads fast on school laptops. `assets/manifest.json` now points at the `.webp` files.
+- Helmholtz's `special` (erased) sprite came back as a solid cream silhouette. Reworked it to the spec: a translucent paper fill with a thin grey outline broken in places.
+- The debug panel's Jump now clears sprites left over from the previous scene.
+- Checked in headless Chrome: title, dialogue, Act 2 and Act 3 screens render with the real art and no errors.
+
 ## 2026-11-08: engine built (by Claude)
 
 **Milestones M1 to M4 are complete. M5 is partly done: Controller Mode is cut (stubbed in `js/ui/controller.js`) and the site is not deployed yet.**
