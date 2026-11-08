@@ -4,7 +4,7 @@
 
 - All 7 music tracks and all 10 sound effects are in `assets/audio/`. Generated with ElevenLabs (Music v2.5 and Sound Effects v2) from the ASSETS.md prompts: 2 takes per music track, 4 per sound effect, best take kept.
 - Every loop is cut on the beat, so it repeats without a jump. The title theme plays its gentle intro once, then loops its fuller middle section, using the new optional `musicLoops` entry in the manifest (BRIEF section 10).
-- Levels evened out: one-shots trimmed and peak-limited, music levelled to the same loudness, ambiences kept quiet. Total audio size 5.4 MB.
+- Levels evened out: one-shots trimmed and peak-limited, music levelled to the same loudness, ambiences kept quiet. Total audio size 5.2 MB.
 - The Voice and Mond voices are designed; their recorded lines come once Lucas picks the voices and writes Mond's speech.
 - Tests 85 of 85 (new: audio manifest checks). All files decode in Chrome at the expected lengths.
 
