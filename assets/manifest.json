@@ -1,0 +1,51 @@
+{
+  "characters": {
+    "lenina":    { "neutral": "characters/lenina/neutral.png", "happy": "characters/lenina/happy.png", "worried": "characters/lenina/worried.png", "upset": "characters/lenina/upset.png", "special": "characters/lenina/special.png" },
+    "bernard":   { "neutral": "characters/bernard/neutral.png", "happy": "characters/bernard/happy.png", "worried": "characters/bernard/worried.png", "upset": "characters/bernard/upset.png", "special": "characters/bernard/special.png" },
+    "helmholtz": { "neutral": "characters/helmholtz/neutral.png", "happy": "characters/helmholtz/happy.png", "worried": "characters/helmholtz/worried.png", "upset": "characters/helmholtz/upset.png", "special": "characters/helmholtz/special.png" },
+    "john":      { "neutral": "characters/john/neutral.png", "happy": "characters/john/happy.png", "worried": "characters/john/worried.png", "upset": "characters/john/upset.png", "special": "characters/john/special.png" },
+    "mond":      { "neutral": "characters/mond/neutral.png", "smile": "characters/mond/smile.png", "cold": "characters/mond/cold.png" }
+  },
+  "backgrounds": {
+    "title": "backgrounds/title.png",
+    "title_reset": "backgrounds/title_reset.png",
+    "classroom_bright": "backgrounds/classroom_bright.png",
+    "classroom_bright_drained": "backgrounds/classroom_drained.png",
+    "classroom_drained": "backgrounds/classroom_drained.png",
+    "hallway": "backgrounds/hallway.png",
+    "roof": "backgrounds/roof.png",
+    "dorm_night": "backgrounds/dorm_night.png",
+    "mond_office": "backgrounds/mond_office.png",
+    "island_shore": "backgrounds/island_shore.png",
+    "lighthouse": "backgrounds/lighthouse.png"
+  },
+  "ui": { "deco_frame": "ui/deco_frame.png" },
+  "music": {
+    "title_theme": "audio/music/title_theme.mp3",
+    "act1_loop": "audio/music/act1_loop.mp3",
+    "act2_loop": "audio/music/act2_loop.mp3",
+    "synthetic_dance": "audio/music/synthetic_dance.mp3",
+    "night_ambience": "audio/music/night_ambience.mp3",
+    "act3_roomtone": "audio/music/act3_roomtone.mp3",
+    "ending_stinger": "audio/music/ending_stinger.mp3"
+  },
+  "sfx": {
+    "advance": "audio/sfx/advance.mp3",
+    "choice": "audio/sfx/choice.mp3",
+    "chime": "audio/sfx/chime.mp3",
+    "shock": "audio/sfx/shock.mp3",
+    "soma": "audio/sfx/soma.mp3",
+    "glitch": "audio/sfx/glitch.mp3",
+    "delete": "audio/sfx/delete.mp3",
+    "type": "audio/sfx/type.mp3",
+    "breath": "audio/sfx/breath.mp3",
+    "page": "audio/sfx/page.mp3"
+  },
+  "voice": {
+    "mond_001": "audio/voice/mond_001.mp3",
+    "mond_002": "audio/voice/mond_002.mp3",
+    "mond_003": "audio/voice/mond_003.mp3",
+    "voice_001": "audio/voice/voice_001.mp3",
+    "voice_002": "audio/voice/voice_002.mp3"
+  }
+}

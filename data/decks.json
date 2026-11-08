@@ -1,0 +1,109 @@
+{
+  "_note": "PLACEHOLDER WORD DECKS. Lucas: replace the prompts, tips and words with your own. Tags: comfort (Lenina likes), status (Bernard), truth (Helmholtz; lowers Catchiness, raises the hidden Truth stat), shakespeare (John; makes a slogan unmeasurable). shock: true makes the tile jolt the player. syl = syllables. Words that share a rhyme key count as a rhyme.",
+  "day1": {
+    "prompt": "[[TODO Lucas: day 1 session prompt]]",
+    "tip": "TIP  The secret of happiness is liking what you've got to do.",
+    "minWords": 3, "maxWords": 7,
+    "tiles": [
+      { "w": "ending", "syl": 2, "rhyme": "ending", "tags": ["comfort"] },
+      { "w": "mending", "syl": 2, "rhyme": "ending", "tags": ["comfort"] },
+      { "w": "is", "syl": 1 },
+      { "w": "better", "syl": 2 },
+      { "w": "than", "syl": 1 },
+      { "w": "happy", "syl": 2, "tags": ["comfort"] },
+      { "w": "every one", "syl": 3, "rhyme": "one", "tags": ["comfort"] },
+      { "w": "fun", "syl": 1, "rhyme": "one", "tags": ["comfort"] },
+      { "w": "stable", "syl": 2, "tags": ["status"] },
+      { "w": "Alpha", "syl": 2, "tags": ["status"] },
+      { "w": "clever", "syl": 2, "rhyme": "ever", "tags": ["status"] },
+      { "w": "never", "syl": 2, "rhyme": "ever" },
+      { "w": "today", "syl": 2, "rhyme": "ay" },
+      { "w": "true", "syl": 1, "tags": ["truth"] },
+      { "w": "pierce", "syl": 1, "tags": ["truth"] }
+    ]
+  },
+  "day2": {
+    "prompt": "[[TODO Lucas: day 2 session prompt]]",
+    "minWords": 3, "maxWords": 7,
+    "tiles": [
+      { "w": "gramme", "syl": 1, "rhyme": "am", "tags": ["comfort"] },
+      { "w": "damn", "syl": 1, "rhyme": "am" },
+      { "w": "a", "syl": 1 },
+      { "w": "is", "syl": 1 },
+      { "w": "better", "syl": 2 },
+      { "w": "than", "syl": 1 },
+      { "w": "holiday", "syl": 3, "rhyme": "ay", "tags": ["comfort"] },
+      { "w": "away", "syl": 2, "rhyme": "ay", "tags": ["comfort"] },
+      { "w": "work", "syl": 1, "tags": ["status"] },
+      { "w": "rank", "syl": 1, "tags": ["status"] },
+      { "w": "sleep", "syl": 1, "rhyme": "eep", "tags": ["comfort"] },
+      { "w": "keep", "syl": 1, "rhyme": "eep" },
+      { "w": "alone", "syl": 2, "tags": ["truth"], "shock": true },
+      { "w": "feel", "syl": 1, "tags": ["truth"] },
+      { "w": "why", "syl": 1, "tags": ["truth"] }
+    ]
+  },
+  "day3": {
+    "prompt": "[[TODO Lucas: Community Sing slogan prompt]]",
+    "minWords": 3, "maxWords": 7,
+    "tiles": [
+      { "w": "every one", "syl": 3, "rhyme": "one", "tags": ["comfort"] },
+      { "w": "belongs", "syl": 2 },
+      { "w": "to", "syl": 1 },
+      { "w": "else", "syl": 1 },
+      { "w": "fun", "syl": 1, "rhyme": "one", "tags": ["comfort"] },
+      { "w": "sing", "syl": 1, "rhyme": "ing", "tags": ["comfort"] },
+      { "w": "everything", "syl": 3, "rhyme": "ing", "tags": ["comfort"] },
+      { "w": "together", "syl": 3, "tags": ["comfort"] },
+      { "w": "Ford", "syl": 1, "tags": ["status"] },
+      { "w": "higher", "syl": 2, "tags": ["status"] },
+      { "w": "old", "syl": 1, "tags": ["truth"], "shock": true },
+      { "w": "mother", "syl": 2, "tags": ["truth"], "shock": true },
+      { "w": "grief", "syl": 1, "tags": ["truth"] },
+      { "w": "now", "syl": 1 },
+      { "w": "all", "syl": 1 }
+    ]
+  },
+  "day4": {
+    "prompt": "[[TODO Lucas: day 4 session prompt, John joins]]",
+    "minWords": 3, "maxWords": 7,
+    "tiles": [
+      { "w": "brave", "syl": 1, "tags": ["shakespeare"] },
+      { "w": "new", "syl": 1, "tags": ["shakespeare"] },
+      { "w": "world", "syl": 1, "tags": ["shakespeare"] },
+      { "w": "goodly", "syl": 2, "tags": ["shakespeare"] },
+      { "w": "creatures", "syl": 2, "tags": ["shakespeare"] },
+      { "w": "beauteous", "syl": 3, "tags": ["shakespeare"] },
+      { "w": "happy", "syl": 2, "tags": ["comfort"] },
+      { "w": "every one", "syl": 3, "rhyme": "one", "tags": ["comfort"] },
+      { "w": "fun", "syl": 1, "rhyme": "one", "tags": ["comfort"] },
+      { "w": "is", "syl": 1 },
+      { "w": "now", "syl": 1 },
+      { "w": "Alpha", "syl": 2, "tags": ["status"] },
+      { "w": "alone", "syl": 2, "tags": ["truth"], "shock": true },
+      { "w": "true", "syl": 1, "tags": ["truth"] },
+      { "w": "lonely", "syl": 2, "tags": ["truth"] }
+    ]
+  },
+  "day5": {
+    "prompt": "[[TODO Lucas: day 5 session prompt]]",
+    "minWords": 3, "maxWords": 7,
+    "tiles": [
+      { "w": "stable", "syl": 2, "rhyme": "able", "tags": ["status"] },
+      { "w": "able", "syl": 2, "rhyme": "able", "tags": ["status"] },
+      { "w": "happy", "syl": 2, "tags": ["comfort"] },
+      { "w": "now", "syl": 1 },
+      { "w": "is", "syl": 1 },
+      { "w": "everybody's", "syl": 4, "tags": ["comfort"] },
+      { "w": "gramme", "syl": 1, "rhyme": "am", "tags": ["comfort"] },
+      { "w": "damn", "syl": 1, "rhyme": "am" },
+      { "w": "sleep", "syl": 1, "tags": ["comfort"] },
+      { "w": "erased", "syl": 2, "tags": ["truth"], "shock": true },
+      { "w": "remember", "syl": 3, "tags": ["truth"] },
+      { "w": "Helmholtz", "syl": 2, "tags": ["truth"], "shock": true },
+      { "w": "why", "syl": 1, "tags": ["truth"] },
+      { "w": "work", "syl": 1, "tags": ["status"] },
+      { "w": "more", "syl": 1 }
+    ]
+  }
+}
