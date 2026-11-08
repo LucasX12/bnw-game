@@ -719,9 +719,12 @@ assets/
   "backgrounds": { "classroom_bright": "backgrounds/classroom_bright.png", "classroom_bright_drained": "backgrounds/classroom_drained.png" },
   "music": { "act1_loop": "audio/music/act1_loop.mp3" },
   "sfx": { "shock": "audio/sfx/shock.mp3" },
-  "voice": { "mond_001": "audio/voice/mond_001.mp3" }
+  "voice": { "mond_001": "audio/voice/mond_001.mp3" },
+  "musicLoops": { "title_theme": [44.0, 64.0] }
 }
 ```
+
+`musicLoops` is optional. A track listed there plays from the top once, then loops between the two times in seconds (its intro is heard only the first time). Tracks not listed loop the whole file.
 
 The manifest lists every entry in 10.1 from day one. The `<id>_drained` convention maps drained backgrounds.
 

@@ -183,5 +183,8 @@
   "mond_003": "audio/voice/mond_003.mp3",
   "voice_001": "audio/voice/voice_001.mp3",
   "voice_002": "audio/voice/voice_002.mp3"
+ },
+ "musicLoops": {
+  "title_theme": [44.0, 64.0]
  }
 }

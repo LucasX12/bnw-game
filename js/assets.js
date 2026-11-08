@@ -20,6 +20,11 @@ export const bgSrc = (id) => path(manifest.backgrounds?.[id]);
 export const hasBg = (id) => !!manifest.backgrounds?.[id];
 export const cgSrc = (id) => path(manifest.cg?.[id]);
 export const audioSrc = (kind, id) => path(manifest[kind]?.[id]);
+// Optional [loopStart, loopEnd] in seconds: the track plays its intro once, then loops that span.
+export const musicLoop = (id) => {
+  const lp = manifest.musicLoops?.[id];
+  return Array.isArray(lp) && lp.length === 2 && lp[1] > lp[0] ? lp : null;
+};
 
 // Loads src into img, falling back to placeholder if it fails. Resolves when something is showing.
 export function loadInto(img, src, placeholder) {
