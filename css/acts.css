@@ -1,0 +1,25 @@
+/* Act 2: paper goes grey, borders mute. Drain itself comes from --drain. */
+#stage.act-2 .textbox { background: #F3F1EC; }
+#stage.act-2 .nametag { filter: saturate(.6); }
+#stage.act-2 .textbox { border-color: color-mix(in srgb, var(--tag, var(--mulberry)) 60%, #8A8D93); }
+
+/* Act 3 */
+#stage.act-3 { background: var(--void); }
+#stage.act-3 .textbox { background: #F2F2F2; border-radius: 0; border-color: var(--ink); }
+#stage.act-3 .nametag { border-radius: 0; background: var(--ink); }
+#stage.act-3 .quickmenu button { color: #A3A3AA; }
+#stage.act-3 .choices button { border-radius: 0; border-color: var(--ink); }
+
+/* Night interludes */
+#stage.interlude { background: var(--night); }
+#stage.interlude #bg { opacity: .3; }
+#stage.interlude #sprites img { filter: brightness(.55) saturate(.6); }
+#stage.interlude .textbox { background: transparent; border: 0; left: 470px; right: 80px; top: 200px; bottom: auto; height: auto; padding: 0; }
+#stage.interlude .textbox .line { color: var(--accent, #E9D7A6); font-size: 29px; font-style: italic; line-height: 1.55; }
+#stage.interlude .textbox .more { background: var(--accent, #E9D7A6); right: 0; bottom: -28px; }
+#stage.interlude .nametag { display: none; }
+#stage.interlude .quickmenu button { color: #C9CDD6; }
+
+/* Terminal mode (Act 3, Mond) */
+#stage.terminal #bg, #stage.terminal #sprites { opacity: 0; }
+#stage.terminal .textbox, #stage.terminal .quickmenu { display: none; }

@@ -1,0 +1,8 @@
+{
+  "citizenLenina": 8,
+  "islandTruth": 3,
+  "autoDoseSeconds": 2,
+  "skipMash": { "advances": 8, "windowMs": 2000, "holdMs": 10000, "cooldownMs": 30000 },
+  "catchiness": { "rhythmTarget": [6, 10], "rhythmMax": 40, "rhymePair": 30, "rhymeMax": 60, "repeat": 10, "comfort": 5, "truth": -15, "shock": -40 },
+  "lateNight": [0, 5]
+}

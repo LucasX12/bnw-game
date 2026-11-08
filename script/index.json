@@ -1,0 +1,4 @@
+{
+  "files": ["act1.txt", "interludes.txt", "act2.txt", "act3.txt", "endings.txt"],
+  "start": "a1_waking"
+}

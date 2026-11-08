@@ -1,0 +1,37 @@
+# ============================================================
+# NIGHT INTERLUDES: inside a club member's head as they fall asleep.
+# Dialogue lines here show as interior monologue in their colour.
+# ============================================================
+
+@scene n1_lenina day3 nosoma
+music night_ambience fade 1500
+bg dorm_night fade 1200
+interlude lenina
+lenina: "[[TODO Lucas: Lenina's pleasant thoughts as she falls asleep]]"
+lenina: "[[TODO Lucas: she thinks about you]]"
+whisper slogan
+lenina: "[[TODO Lucas: she drifts off, content]]"
+endinterlude
+jump a2_john_arrives
+
+@scene n2_helmholtz day4 nosoma
+music night_ambience fade 1500
+bg dorm_night fade 1200
+interlude helmholtz
+helmholtz: "[[TODO Lucas: Helmholtz cannot sleep]]"
+helmholtz: "[[TODO Lucas: he tries to make words that pierce]]"
+voice: "[[TODO Lucas: a whisper he cannot shut out]]"
+helmholtz: "[[TODO Lucas: restless]]"
+endinterlude
+jump a2_helmholtz_gone
+
+@scene n3_bernard day5 nosoma
+if records.bernard == "transferred" -> a2_day5_end
+music night_ambience fade 1500
+bg dorm_night fade 1200
+interlude bernard
+bernard: "[[TODO Lucas: Bernard rehearses what he will say to impress you]]"
+bernard: "[[TODO Lucas: anxious and petty]]"
+whisper slogan
+endinterlude
+jump a2_day5_end
