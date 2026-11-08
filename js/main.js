@@ -196,7 +196,7 @@ function wireBus() {
   on('script:end', toTitle);
   on('settings:changed', ({ key }) => { if (['music', 'sfx', 'voice'].includes(key)) audio.applyVolumes(); });
   on('debug:jump', (target) => {
-    if (!inGame) { resetStage(); store.state = freshState('Tester'); enterGame(); }
+    if (!inGame) { resetStage(); store.state = freshState('Tester'); enterGame(); } else { runner.stop(); sprites.clear(); }
     runner.start(target);
   });
 }
