@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-08: Act 1 script draft (for Lucas's review)
+
+- Drafted all of Act 1 (7 scenes) and Lenina's night interlude. 14 lines quote the novel verbatim, each with its page number in a `# p.NN` comment.
+- Story split: Lucas writes Mond's speech, Helmholtz's poem and the four endings; the other scenes are drafted for his review.
+- AGENTS.md, BRIEF.md and ASSETS.md updated to match that split.
+- Script parses with no errors (71 TODO lines left). Tests 64 of 64; full playthrough to the Stability ending with no errors.
+
 ## 2026-11-08: art added (by Claude)
 
 - Added all 34 images from ChatGPT (`ehn_art.zip`): 23 character sprites, 10 backgrounds, 1 UI ornament. All files matched the asset contract: right names, right sizes, real transparency.

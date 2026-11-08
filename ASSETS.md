@@ -12,7 +12,7 @@ Everything the game needs that isn't code or script: 23 character sprites and 10
 2. Do the characters one at a time. For each one, generate the **neutral** sprite first and regenerate it until you like it. Then make the other expressions as **edits of that approved image**, never as fresh generations. That is what keeps the face consistent.
 3. Then do the backgrounds. The `drained` and `reset` versions are edits of their bright originals.
 4. Finally, paste **Block Z** to get everything packaged as one zip.
-5. Run the checklist at the end of Part A, then hand the zip to Claude or Codex.
+5. Run the checklist at the end of Part A, then hand the zip over to be added to the repo.
 
 If an image comes back with a fake checkerboard or a white background instead of real transparency, say: "The background isn't actually transparent. Regenerate it on a flat pure green (#00FF00) background instead." The green can be removed afterwards.
 

@@ -1,11 +1,11 @@
 # Everybody's Happy Now: architecture brief
 
 **Project:** a browser visual novel for an English class unit on Aldous Huxley's *Brave New World*.
-**Author:** Lucas Xia. **Builder:** Codex, working in the GitHub repo `bnw-game`.
+**Author:** Lucas Xia. **Repo:** `bnw-game` on GitHub.
 **Hosting:** GitHub Pages, static files only.
 **Deadline:** under one week from the start of the build. Scope is the full plan; Controller Mode is cut first if time runs short.
 
-Page numbers below refer to the Harper Perennial edition Lucas is using. They are there so in-game details stay tied to the book; Codex does not need the book.
+Page numbers below refer to the Harper Perennial edition Lucas is using. They are there so in-game details stay tied to the book.
 
 ---
 
@@ -45,7 +45,7 @@ The player joins a student Writing Circle in the Department of Writing at the Co
 
 ## 3. Story logic the engine must support
 
-Lucas writes all the words. This section describes only the structure the engine needs: acts, scenes, states and endings.
+This section describes the structure the engine needs: acts, scenes, states and endings. Lucas writes Mond's speech, Helmholtz's poem and the four endings; the other scenes are drafted for his review. Dialogue leans on verbatim quotes from the novel, each marked with its page number in a `#` comment.
 
 ### 3.1 Structure
 
@@ -87,7 +87,7 @@ The thresholds (8 and 3) live in `data/tuning.json`, not in code, so Lucas can a
 
 ### 3.3 Script budget for Lucas
 
-Guidance only. Codex creates placeholder scenes sized roughly to this.
+Guidance only.
 
 | Part | Words |
 | --- | --- |
@@ -155,7 +155,6 @@ bnw-game/
     debug.js            ?debug=1 panel and script error overlay
   script/
     index.json          ordered list of script files
-    _demo.txt           Codex-written test script using every command, placeholder text only
     act1.txt  act2.txt  act3.txt  interludes.txt  endings.txt   (Lucas)
   data/
     characters.json     ids, display names, castes, tag colours, sprite scale
@@ -220,7 +219,7 @@ Preload in the background: the next scene's backgrounds, sprites and music. Neve
 
 ## 5. Script format
 
-Lucas writes the story in plain text files that read like a screenplay. The format has to be forgiving to type and strict to parse: every error names the file and line.
+The story lives in plain text files that read like a screenplay. The format has to be forgiving to type and strict to parse: every error names the file and line.
 
 ### 5.1 Files and order
 
@@ -319,7 +318,7 @@ A tiny safe evaluator in `expr.js`. Never use `eval` or `new Function`.
 - Helpers: `highest == bernard` is true when Bernard's affinity is strictly the highest of the four club members; `highest_of helmholtz bernard` returns the id with the higher affinity (ties go to the first listed).
 - Unknown paths evaluate to `0` or `false` and log a warning in debug mode.
 
-### 5.5 Example (placeholder text, which is how Codex writes it)
+### 5.5 Example
 
 ```
 @scene a1_join act1 day1
@@ -436,7 +435,7 @@ Name tag colours follow the caste colours in the book: Alphas wear grey, Gammas 
 }
 ```
 
-Tags: `comfort` (Lenina), `status` (Bernard), `truth` (Helmholtz), `shakespeare` (John, Act 2 only). Lucas writes the decks; Codex ships a placeholder deck with about 15 tiles per session for five sessions: `day1`, `day2`, `day3`, `day4`, `day5`.
+Tags: `comfort` (Lenina), `status` (Bernard), `truth` (Helmholtz), `shakespeare` (John, Act 2 only). The repo ships a deck of about 15 tiles for each of five sessions: `day1`, `day2`, `day3`, `day4`, `day5`.
 
 ### 7.3 `data/tuning.json`
 
@@ -644,7 +643,7 @@ If `matchMedia('(pointer: coarse)').matches` and the viewport is narrower than 9
 
 ### 9.4 Fixed UI copy
 
-This is the only text Codex may write into the game. Everything else is Lucas's.
+Fixed interface text, used exactly as written.
 
 | Where | Text |
 | --- | --- |
@@ -723,7 +722,7 @@ assets/
 }
 ```
 
-Codex writes the full manifest with every entry listed in 10.1 from day one. The `<id>_drained` convention maps drained backgrounds.
+The manifest lists every entry in 10.1 from day one. The `<id>_drained` convention maps drained backgrounds.
 
 ### 10.4 Placeholders
 
@@ -822,7 +821,7 @@ Five working days for the build, then one day for Lucas to drop in script and as
 
 ## 14. Appendix: where each mechanic comes from in the book
 
-For Lucas's overview document, and so Codex understands why each feature exists.
+For Lucas's overview document, and so anyone working on the game understands why each feature exists.
 
 | Page | Moment in the book | Where it lives in the game |
 | --- | --- | --- |
