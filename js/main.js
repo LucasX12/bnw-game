@@ -8,6 +8,7 @@ import { parseScripts } from './script/parser.js';
 import * as runner from './script/runner.js';
 import * as bg from './stage/backgrounds.js';
 import * as sprites from './stage/sprites.js';
+import * as cg from './stage/cg.js';
 import * as fx from './stage/fx.js';
 import * as dialogue from './ui/dialogue.js';
 import * as choices from './ui/choices.js';
@@ -40,7 +41,7 @@ async function fetchJson(path) {
 async function boot() {
   initStage();
   const ui = document.getElementById('ui');
-  bg.mount(); fx.mount();
+  bg.mount(); fx.mount(); cg.mount();
   dialogue.mount(ui); terminal.mount(ui); soma.mount(ui);
   quickmenu.mount(ui, {
     auto: () => dialogue.toggleAuto(),
@@ -109,7 +110,7 @@ function resetStage() {
   choices.cancel(); slogan.cancel();
   terminal.exit();
   setStageClass('interlude', false);
-  sprites.clear(); bg.clear();
+  sprites.clear(); bg.clear(); cg.clear();
   soma.setState('hidden');
   setAct(1); setDrain(0, 0);
   audio.setDetune(0, 0);
@@ -149,6 +150,7 @@ function restoreStage(s) {
   if (s.stage.bg) bg.set(s.stage.bg, { mode: s.stage.bgMode === 'drain' ? 'drain' : 'cut' });
   if (s.mode === 'interlude' && s.interlude) interlude.enter(s.interlude);
   for (const sp of s.stage.sprites || []) sprites.show(sp.id, sp.expr, sp.pos);
+  if (s.stage.cg) cg.show(s.stage.cg, 0);
   if (s.mode === 'terminal') { terminal.enter(); if (s.termStats) terminal.showStats(runner.getStatsView()); }
   if (s.stage.music) audio.playMusic(s.stage.music, 800); else audio.stopMusic(400);
   audio.setDetune(s.stage.detune || 0, 0);
@@ -196,7 +198,7 @@ function wireBus() {
   on('script:end', toTitle);
   on('settings:changed', ({ key }) => { if (['music', 'sfx', 'voice'].includes(key)) audio.applyVolumes(); });
   on('debug:jump', (target) => {
-    if (!inGame) { resetStage(); store.state = freshState('Tester'); enterGame(); } else { runner.stop(); sprites.clear(); }
+    if (!inGame) { resetStage(); store.state = freshState('Tester'); enterGame(); } else { runner.stop(); sprites.clear(); cg.clear(); }
     runner.start(target);
   });
 }

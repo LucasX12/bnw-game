@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-08: ready for the expanded art pack
+
+- New `cg` command and layer for full-screen event illustrations, saved and restored with the game.
+- 11 to 14 expressions per club member, 7 for Mond, plus new characters Fanny, Henry, the Bokanovsky twins and a crowd.
+- 25 new backgrounds (time of day, drained versions, the Singery, the Hatchery, the lift, dreamscapes and more), 19 CG slots and 5 interface images listed in `assets/manifest.json`. Everything shows a stand-in until its file arrives.
+- ASSETS_v2.md: the ChatGPT prompts for all 96 new images, in three batches.
+
 ## 2026-11-08: Act 1 script draft (for Lucas's review)
 
 - Drafted all of Act 1 (7 scenes) and Lenina's night interlude. 14 lines quote the novel verbatim, each with its page number in a `# p.NN` comment.

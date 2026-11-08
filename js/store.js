@@ -42,7 +42,7 @@ export function freshState(name) {
     player: { name, caste: 'Beta-Plus' },
     pos: { scene: null, node: 0 },
     act: 1, day: 1, drain: 0,
-    stage: { bg: null, bgMode: 'normal', sprites: [], music: null, detune: 0 },
+    stage: { bg: null, bgMode: 'normal', sprites: [], cg: null, music: null, detune: 0 },
     stats: { soma: 0, somaAct3: 0, somaAuto: 0, skips: 0, refreshes: 0, shockOffered: 0, shockUsed: 0, truth: 0, slogans: 0, catchinessTotal: 0 },
     affinity: { lenina: 0, bernard: 0, helmholtz: 0, john: 0 },
     flags: {},

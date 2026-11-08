@@ -308,6 +308,7 @@ Each option: quoted text, `->`, a target label or scene id, then optional bracke
 | `ending` | `<id>` | Run the ending (8.11, 3.2) |
 | `checkpoint` | none | Force an autosave mid-scene |
 | `day` | `<n>` | Set the in-game day directly |
+| `cg` | `<id> [fade ms]` or `off [ms]` | Show or hide a full-screen event illustration above the characters. Ids are in `assets/manifest.json` under `cg` |
 
 ### 5.4 Expressions
 
@@ -672,7 +673,7 @@ Fixed interface text, used exactly as written.
 
 ## 10. Asset contract
 
-Art comes from ChatGPT as one zip. Audio comes from ElevenLabs. Both follow this contract exactly. Prompts are in ASSETS.md.
+Art comes from ChatGPT as zips. Audio comes from ElevenLabs. Both follow this contract exactly. Prompts are in ASSETS.md (the core set) and ASSETS_v2.md (the expanded set: 11 to 14 expressions per character, Fanny, Henry, crowds, 25 more backgrounds, 19 CGs). Images are stored as WebP; `assets/manifest.json` is the full list.
 
 ### 10.1 Folders and names
 

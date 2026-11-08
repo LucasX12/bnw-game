@@ -6,6 +6,7 @@ import { evaluate, interpolate } from './expr.js';
 import { setAct, setDrain, sleep } from '../stage/stage.js';
 import * as bg from '../stage/backgrounds.js';
 import * as sprites from '../stage/sprites.js';
+import * as cg from '../stage/cg.js';
 import * as fx from '../stage/fx.js';
 import * as dialogue from '../ui/dialogue.js';
 import * as choices from '../ui/choices.js';
@@ -256,6 +257,9 @@ async function exec(node, my) {
     case 'ending': return runEnding(a[0]);
     case 'checkpoint': autosave(); return;
     case 'day': s.day = Number(a[0]) || s.day; return;
+    case 'cg':
+      if (a[0] === 'off') { s.stage.cg = null; cg.hide(Number(a[1]) || 700); } else { s.stage.cg = a[0]; cg.show(a[0], Number(a[2] || a[1]) || 700); }
+      return;
     default: warnOnce(`Command "${node.name}" is not implemented`);
   }
 }
