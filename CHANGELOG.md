@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-08: full art pack and event illustrations
+
+- Added the complete ChatGPT art pack (`ehn_complete.zip`): all 130 images in the manifest, none missing, none extra. 70 character sprites (14 expressions each for Lenina, Bernard, Helmholtz and John, 7 for Mond, plus Fanny, Henry, the Bokanovsky twins and a crowd), 35 backgrounds, 19 CGs and 6 interface images.
+- Converted to WebP: 260 MB down to 20.5 MB. Helmholtz's `special` sprite came back as a solid silhouette again, so it is redrawn as the faded, erased-from-the-Records outline.
+- All 19 CGs are staged in the script with `cg` commands at their moments: Lenina's welcome, the circle, the soma offer, the Community Sing, the smudged board, Lenina asleep, Helmholtz's poem, the empty chair, the drained circle, Bernard's letter, Lenina crying, John at the window, Mond's desk and safe, and one per ending. Only commands were added; no dialogue or TODO lines changed.
+- Pressing soma now clears any CG on screen too, since soma skips the rest of the scene.
+- Tests 85 of 85. Playthroughs to Stability, Island, Right to Be Unhappy and Perfect Citizen with no errors; 18 of 19 CGs seen on screen. Bernard's island CG needs a rarer route; the parser confirms its id.
+
 ## 2026-11-08: music and sound effects (ElevenLabs)
 
 - All 7 music tracks and all 10 sound effects are in `assets/audio/`. Generated with ElevenLabs (Music v2.5 and Sound Effects v2) from the ASSETS.md prompts: 2 takes per music track, 4 per sound effect, best take kept.

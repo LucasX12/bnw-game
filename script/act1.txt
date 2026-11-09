@@ -27,12 +27,14 @@ jump a1_join
 bg classroom_bright fade 800
 music act1_loop fade 1200
 show lenina happy center
+cg cg_welcome fade 800
 lenina happy: "There you are! You must be the new Beta-Plus. I'm Lenina. Lenina Crowne."
 lenina: "Welcome to the Writing Circle! We write the slogans. You know, the ones you hear at night."
 lenina happy: "Somebody has to think them up. And now that somebody is you!"
 # p.74
 lenina happy: "Everybody's happy now."
 "She says it the way other people say good morning."
+cg off 700
 choice
   "Smile back. I'm happy to be here." -> join_warm [+lenina 1]
   "Ask who decides what the slogans say." -> join_curious [+helmholtz 1]
@@ -71,8 +73,10 @@ bernard worried: "He never comes down here."
 jump a1_slogan1
 
 @scene a1_slogan1 act1 day1
+cg cg_circle fade 800
 helmholtz: "Right. Your first slogan. Short, simple, something a sleeping child could carry for life."
 helmholtz: "Pick your words. The meter tells you if it's catchy. It always knows."
+cg off 600
 slogan day1
 show lenina neutral left
 show helmholtz neutral center
@@ -101,9 +105,11 @@ bernard upset: "Too much alcohol in my blood-surrogate. That's why I'm short. Th
 lenina worried: "You're spoiling everyone's morning."
 soma on
 somaskip a1_slogan2
+cg cg_soma_offer fade 600
 lenina happy: "Here. Half a gramme. You look like you could use one too, after all that."
 # p.55
 lenina happy: "A gramme is better than a damn."
+cg off 600
 "A small round button glows at the edge of your vision. You could press it. It would be so easy."
 # p.89
 bernard upset: "I'd rather be myself. Myself and nasty." [sad]
@@ -131,8 +137,10 @@ show lenina happy left
 show helmholtz neutral center
 show bernard neutral right
 lenina happy: "Big day! Our circle writes the opening line for Thursday's Community Sing. The whole district will be singing your words."
+cg cg_community_sing fade 900
 # p.93
 lenina: "Never put off till to-morrow the fun you can have today."
+cg off 700
 helmholtz: "No pressure. Only everyone."
 slogan day3
 helmholtz: "Let's see it on the board."
@@ -151,5 +159,7 @@ bernard worried: "You didn't write that. I was watching. Nobody wrote that."
 helmholtz worried: "Then it wrote itself."
 # p.93
 lenina: "When the individual feels, the community reels."
+cg cg_smudged_board fade 900
 "She wipes the board clean. It takes three tries."
+cg off 900
 jump n1_lenina

@@ -419,6 +419,8 @@ on('soma:request', ({ auto }) => {
   emit('soma:pressed', { auto });
   const target = s.somaskip || nextSceneId();
   if (!target) return;
+  // Soma skips the rest of the scene, so an event illustration from it goes too.
+  if (s.stage.cg) { s.stage.cg = null; cg.hide(600); }
   pendingSoma = target;
   dialogue.cancel();
   choices.cancel();

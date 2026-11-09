@@ -20,7 +20,11 @@ jump a3_mond
 bg mond_office fade 1200
 hide lenina
 show mond neutral center
+cg cg_mond_desk fade 1200
 mond: "[[TODO Lucas: Mond greets you in his office]]" [vo mond_001]
+cg cg_mond_safe fade 1000
+wait 2.5
+cg off 800
 terminal on
 title "{name}"
 mond: "{name}."

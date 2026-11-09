@@ -12,8 +12,10 @@ lenina: "The new one is sweet. A little serious. They'll learn. Everybody learns
 lenina: "That word on the board. I won't think about it. There's no point thinking about things."
 # p.103
 lenina: "Was and will make me ill. I take a gramme and only am."
+cg cg_lenina_sleep fade 1500
 whisper slogan
 lenina: "Oh, that's ours. Isn't it pretty, when you hear it in the dark?"
+cg off 1200
 endinterlude
 jump a2_john_arrives
 
