@@ -44,7 +44,7 @@ suite('Parser: line types');
   assert(n[5].name === 'jump' && n[5].target === 'here', 'jump');
   const c = parse('@scene a\ncg cg_welcome fade 900\ncg off 400', { characters: chars });
   assert(c.errors.length === 0 && c.scenes.a.nodes[0].name === 'cg' && c.scenes.a.nodes[1].args[0] === 'off', 'cg command');
-  assert(parse('@scene a\n"[[TODO Lucas: x]]"\n"[[TODO Lucas: y]]"').todo === 2, 'TODO counter');
+  assert(parse('@scene a\n"[[TODO: x]]"\n"[[TODO: y]]"').todo === 2, 'TODO counter');
   const q = parse('@scene a\nlenina: "She said "hi" to me."', { characters: chars });
   assert(q.scenes.a.nodes[0].text === 'She said "hi" to me.', 'inner quotes kept');
 }

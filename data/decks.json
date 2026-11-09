@@ -1,7 +1,7 @@
 {
   "_note": "PLACEHOLDER WORD DECKS. Lucas: replace the prompts, tips and words with your own. Tags: comfort (Lenina likes), status (Bernard), truth (Helmholtz; lowers Catchiness, raises the hidden Truth stat), shakespeare (John; makes a slogan unmeasurable). shock: true makes the tile jolt the player. syl = syllables. Words that share a rhyme key count as a rhyme.",
   "day1": {
-    "prompt": "[[TODO Lucas: day 1 session prompt]]",
+    "prompt": "[[TODO: day 1 session prompt]]",
     "tip": "TIP  The secret of happiness is liking what you've got to do.",
     "minWords": 3, "maxWords": 7,
     "tiles": [
@@ -23,7 +23,7 @@
     ]
   },
   "day2": {
-    "prompt": "[[TODO Lucas: day 2 session prompt]]",
+    "prompt": "[[TODO: day 2 session prompt]]",
     "minWords": 3, "maxWords": 7,
     "tiles": [
       { "w": "gramme", "syl": 1, "rhyme": "am", "tags": ["comfort"] },
@@ -44,7 +44,7 @@
     ]
   },
   "day3": {
-    "prompt": "[[TODO Lucas: Community Sing slogan prompt]]",
+    "prompt": "[[TODO: Community Sing slogan prompt]]",
     "minWords": 3, "maxWords": 7,
     "tiles": [
       { "w": "every one", "syl": 3, "rhyme": "one", "tags": ["comfort"] },
@@ -65,7 +65,7 @@
     ]
   },
   "day4": {
-    "prompt": "[[TODO Lucas: day 4 session prompt, John joins]]",
+    "prompt": "[[TODO: day 4 session prompt, John joins]]",
     "minWords": 3, "maxWords": 7,
     "tiles": [
       { "w": "brave", "syl": 1, "tags": ["shakespeare"] },
@@ -86,7 +86,7 @@
     ]
   },
   "day5": {
-    "prompt": "[[TODO Lucas: day 5 session prompt]]",
+    "prompt": "[[TODO: day 5 session prompt]]",
     "minWords": 3, "maxWords": 7,
     "tiles": [
       { "w": "stable", "syl": 2, "rhyme": "able", "tags": ["status"] },

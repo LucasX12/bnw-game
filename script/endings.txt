@@ -11,8 +11,8 @@ act 1
 bg classroom_bright fade 2000
 music act1_loop fade 2000
 show lenina happy center
-lenina happy: "[[TODO Lucas: everything is lovely again]]"
-"[[TODO Lucas: narration, you can't remember why you were worried]]"
+lenina happy: "[[TODO: everything is lovely again]]"
+"[[TODO: narration, you can't remember why you were worried]]"
 ending stability
 
 @scene end_island act3 island
@@ -22,16 +22,16 @@ title reset
 drain 0.3 2000
 bg island_shore fade 2000
 music stop fade 2000
-"[[TODO Lucas: narration, arriving on the island]]"
+"[[TODO: narration, arriving on the island]]"
 if highest_of helmholtz bernard == "helmholtz" -> island_helmholtz
 show bernard neutral center
-bernard: "[[TODO Lucas: Bernard is here]]"
+bernard: "[[TODO: Bernard is here]]"
 jump island_end
 label island_helmholtz
 show helmholtz happy center
-helmholtz happy: "[[TODO Lucas: Helmholtz is here, writing]]"
+helmholtz happy: "[[TODO: Helmholtz is here, writing]]"
 label island_end
-"[[TODO Lucas: closing narration]]"
+"[[TODO: closing narration]]"
 ending island
 
 @scene end_unhappy act3 noskip
@@ -42,9 +42,9 @@ title reset
 music stop fade 1500
 drain 0.5 1500
 bg lighthouse fade 3000
-"[[TODO Lucas: narration, you chose to feel everything]]"
-"[[TODO Lucas: narration, the lighthouse in the distance]]"
-"[[TODO Lucas: final line]]"
+"[[TODO: narration, you chose to feel everything]]"
+"[[TODO: narration, the lighthouse in the distance]]"
+"[[TODO: final line]]"
 skip on
 ending unhappy
 
@@ -54,6 +54,6 @@ drain 0 1500
 bg classroom_bright fade 1500
 music act1_loop fade 1500
 show lenina special center
-lenina special: "[[TODO Lucas: Lenina is so proud of you]]"
-"[[TODO Lucas: narration, you never meet Mond. You never needed to.]]"
+lenina special: "[[TODO: Lenina is so proud of you]]"
+"[[TODO: narration, you never meet Mond. You never needed to.]]"
 ending citizen

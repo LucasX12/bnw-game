@@ -11,55 +11,55 @@ soma on
 set flag.met_john true
 show lenina happy left
 show john neutral right
-lenina happy: "[[TODO Lucas: Lenina introduces the transfer student from the Reservation]]"
-john: "[[TODO Lucas: John speaks, in Shakespeare's words]]"
+lenina happy: "[[TODO: Lenina introduces the transfer student from the Reservation]]"
+john: "[[TODO: John speaks, in Shakespeare's words]]"
 show bernard happy center
-bernard happy: "[[TODO Lucas: Bernard shows John off like an exhibit]]"
+bernard happy: "[[TODO: Bernard shows John off like an exhibit]]"
 choice
-  "[[TODO Lucas: treat John as a curiosity]]" -> john_curio [+bernard 1]
-  "[[TODO Lucas: actually talk to John]]" -> john_talk [+john 2]
+  "[[TODO: treat John as a curiosity]]" -> john_curio [+bernard 1]
+  "[[TODO: actually talk to John]]" -> john_talk [+john 2]
 end
 label john_curio
-john upset: "[[TODO Lucas: John notices]]"
+john upset: "[[TODO: John notices]]"
 jump a2_slogan3
 label john_talk
-john happy: "[[TODO Lucas: John is surprised someone listened]]"
+john happy: "[[TODO: John is surprised someone listened]]"
 jump a2_slogan3
 
 @scene a2_slogan3 act2 day4
 show helmholtz neutral center
-helmholtz: "[[TODO Lucas: session intro]]"
+helmholtz: "[[TODO: session intro]]"
 slogan day4
 if slogan.catchiness == 0 -> s3_unmeasurable
-lenina happy: "[[TODO Lucas: reaction: {slogan.last}]]"
+lenina happy: "[[TODO: reaction: {slogan.last}]]"
 jump a2_poem
 label s3_unmeasurable
-"[[TODO Lucas: narration, the meter cannot read John's words]]"
+"[[TODO: narration, the meter cannot read John's words]]"
 jump a2_poem
 
 @scene a2_poem act2 day4
 bg classroom_bright drain 2000
 show helmholtz worried center
-helmholtz worried: "[[TODO Lucas: Helmholtz says he wrote something real]]"
-"[[TODO Lucas: Helmholtz's poem, line 1]]" [noskip]
-"[[TODO Lucas: Helmholtz's poem, line 2]]" [noskip]
-"[[TODO Lucas: Helmholtz's poem, line 3]]" [noskip]
-"[[TODO Lucas: Helmholtz's poem, line 4]]" [noskip]
+helmholtz worried: "[[TODO: Helmholtz says he wrote something real]]"
+"[[TODO: Helmholtz's poem, line 1]]" [noskip]
+"[[TODO: Helmholtz's poem, line 2]]" [noskip]
+"[[TODO: Helmholtz's poem, line 3]]" [noskip]
+"[[TODO: Helmholtz's poem, line 4]]" [noskip]
 show lenina upset left
-lenina upset: "[[TODO Lucas: the room reacts]]" [sad]
+lenina upset: "[[TODO: the room reacts]]" [sad]
 choice
-  "[[TODO Lucas: defend Helmholtz]]" -> poem_defend [+helmholtz 2] [set stats.truth stats.truth + 1]
-  "[[TODO Lucas: laugh with the others]]" -> poem_laugh [+lenina 1]
-  "[[TODO Lucas: say nothing]]" -> poem_silent
+  "[[TODO: defend Helmholtz]]" -> poem_defend [+helmholtz 2] [set stats.truth stats.truth + 1]
+  "[[TODO: laugh with the others]]" -> poem_laugh [+lenina 1]
+  "[[TODO: say nothing]]" -> poem_silent
 end
 label poem_defend
-helmholtz happy: "[[TODO Lucas: Helmholtz is grateful]]"
+helmholtz happy: "[[TODO: Helmholtz is grateful]]"
 jump n2_helmholtz
 label poem_laugh
-helmholtz upset: "[[TODO Lucas: Helmholtz hears you laugh]]" [sad]
+helmholtz upset: "[[TODO: Helmholtz hears you laugh]]" [sad]
 jump n2_helmholtz
 label poem_silent
-helmholtz worried: "[[TODO Lucas: Helmholtz looks at you]]"
+helmholtz worried: "[[TODO: Helmholtz looks at you]]"
 jump n2_helmholtz
 
 @scene a2_helmholtz_gone act2 day5 sad
@@ -67,32 +67,32 @@ bg classroom_bright drain 1500
 music act2_loop fade 1200
 detune 0.35
 show helmholtz special center
-"[[TODO Lucas: narration, something is wrong with Helmholtz]]" [corrupt 0.4]
+"[[TODO: narration, something is wrong with Helmholtz]]" [corrupt 0.4]
 delete helmholtz
 show lenina happy left
-lenina happy: "[[TODO Lucas: Lenina doesn't remember Helmholtz. Ending is better than mending.]]"
-you: "[[TODO Lucas: you ask about him]]"
-lenina special: "[[TODO Lucas: her smile is too wide]]" [sad]
+lenina happy: "[[TODO: Lenina doesn't remember Helmholtz. Ending is better than mending.]]"
+you: "[[TODO: you ask about him]]"
+lenina special: "[[TODO: her smile is too wide]]" [sad]
 jump a2_bernard_panics
 label a2_helmholtz_gone_mended
 # Refreshing to escape lands here. He is still gone.
 delete helmholtz
 show lenina happy left
-lenina happy: "[[TODO Lucas: shorter, happier version for players who refreshed to escape]]"
+lenina happy: "[[TODO: shorter, happier version for players who refreshed to escape]]"
 jump a2_bernard_panics
 
 @scene a2_bernard_panics act2 day5
 show bernard worried right
 review bernard
-bernard worried: "[[TODO Lucas: Bernard has been threatened with Iceland]]" [sad]
-bernard special: "[[TODO Lucas: he is desperate for your approval]]"
+bernard worried: "[[TODO: Bernard has been threatened with Iceland]]" [sad]
+bernard special: "[[TODO: he is desperate for your approval]]"
 if highest == bernard -> bernard_deleted
-bernard: "[[TODO Lucas: Bernard survives by turning on John]]"
+bernard: "[[TODO: Bernard survives by turning on John]]"
 jump a2_soma_turns
 label bernard_deleted
-bernard worried: "[[TODO Lucas: Bernard's last line before he goes]]" [sad]
+bernard worried: "[[TODO: Bernard's last line before he goes]]" [sad]
 delete bernard
-"[[TODO Lucas: narration, the seat beside you is empty]]"
+"[[TODO: narration, the seat beside you is empty]]"
 jump a2_soma_turns
 
 @scene a2_soma_turns act2 day5
@@ -100,10 +100,10 @@ music synthetic_dance fade 1500
 detune 0.5
 soma auto
 show lenina happy left
-lenina happy: "[[TODO Lucas: everything is fine]]"
-"[[TODO Lucas: narration, something sad]]" [sad]
-lenina worried: "[[TODO Lucas: a sad line the soma button tries to dose]]" [sad]
-"[[TODO Lucas: narration]]"
+lenina happy: "[[TODO: everything is fine]]"
+"[[TODO: narration, something sad]]" [sad]
+lenina worried: "[[TODO: a sad line the soma button tries to dose]]" [sad]
+"[[TODO: narration]]"
 jump a2_john_soma
 
 @scene a2_john_soma act2 day5 noskip
@@ -111,12 +111,12 @@ soma off
 skip off
 music stop fade 2000
 show john upset center
-john upset: "[[TODO Lucas: John sees the soma being handed out]]"
+john upset: "[[TODO: John sees the soma being handed out]]"
 effect shake 400
-"[[TODO Lucas: narration, John throws the soma out of the window]]"
-john: "[[TODO Lucas: John's speech to the club]]"
-lenina upset: "[[TODO Lucas: Lenina reaches for a gramme that isn't there]]" [sad]
-"[[TODO Lucas: narration, there is nothing to press]]"
+"[[TODO: narration, John throws the soma out of the window]]"
+john: "[[TODO: John's speech to the club]]"
+lenina upset: "[[TODO: Lenina reaches for a gramme that isn't there]]" [sad]
+"[[TODO: narration, there is nothing to press]]"
 skip on
 soma auto
 jump n3_bernard
