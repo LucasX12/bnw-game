@@ -21,10 +21,10 @@ jump a2_john_arrives
 music night_ambience fade 1500
 bg dorm_night fade 1200
 interlude helmholtz
-helmholtz: "[[TODO Lucas: Helmholtz cannot sleep]]"
-helmholtz: "[[TODO Lucas: he tries to make words that pierce]]"
-voice: "[[TODO Lucas: a whisper he cannot shut out]]"
-helmholtz: "[[TODO Lucas: restless]]"
+helmholtz: "[[TODO: Helmholtz cannot sleep]]"
+helmholtz: "[[TODO: he tries to make words that pierce]]"
+voice: "[[TODO: a whisper he cannot shut out]]"
+helmholtz: "[[TODO: restless]]"
 endinterlude
 jump a2_helmholtz_gone
 
@@ -33,8 +33,8 @@ if records.bernard == "transferred" -> a2_day5_end
 music night_ambience fade 1500
 bg dorm_night fade 1200
 interlude bernard
-bernard: "[[TODO Lucas: Bernard rehearses what he will say to impress you]]"
-bernard: "[[TODO Lucas: anxious and petty]]"
+bernard: "[[TODO: Bernard rehearses what he will say to impress you]]"
+bernard: "[[TODO: anxious and petty]]"
 whisper slogan
 endinterlude
 jump a2_day5_end

@@ -11,43 +11,43 @@ detune 0
 bg classroom_drained fade 1500
 soma act3
 show lenina special center
-"[[TODO Lucas: narration, the room is empty except Lenina]]"
-"[[TODO Lucas: narration, your slogans are on the walls: {slogan.1}, {slogan.2}, {slogan.3}]]"
-lenina special: "[[TODO Lucas: Lenina, smiling]]"
+"[[TODO: narration, the room is empty except Lenina]]"
+"[[TODO: narration, your slogans are on the walls: {slogan.1}, {slogan.2}, {slogan.3}]]"
+lenina special: "[[TODO: Lenina, smiling]]"
 jump a3_mond
 
 @scene a3_mond act3 day6
 bg mond_office fade 1200
 hide lenina
 show mond neutral center
-mond: "[[TODO Lucas: Mond greets you in his office]]" [vo mond_001]
+mond: "[[TODO: Mond greets you in his office]]" [vo mond_001]
 terminal on
 title "{name}"
 mond: "{name}."
 stats show
-mond: "[[TODO Lucas: Mond reads your stats. You pressed soma {stats.soma} times and skipped {stats.skips} lines.]]"
+mond: "[[TODO: Mond reads your stats. You pressed soma {stats.soma} times and skipped {stats.skips} lines.]]"
 if stats.refreshes > 0 -> mond_refresh
 jump mond_hour
 label mond_refresh
-mond: "[[TODO Lucas: Mond mentions the {stats.refreshes} refreshes]]"
+mond: "[[TODO: Mond mentions the {stats.refreshes} refreshes]]"
 label mond_hour
 if clock.late -> mond_late
 jump mond_case
 label mond_late
-mond: "[[TODO Lucas: Mond notes that it is {clock.hourWords}]]"
+mond: "[[TODO: Mond notes that it is {clock.hourWords}]]"
 label mond_case
 if flag.mended -> mond_mended
 jump mond_argument
 label mond_mended
-mond: "[[TODO Lucas: Mond noticed you cleared your browser data to bring them back]]"
+mond: "[[TODO: Mond noticed you cleared your browser data to bring them back]]"
 label mond_argument
-mond: "[[TODO Lucas: Mond's case for stability over truth, part 1]]" [vo mond_002]
-mond: "[[TODO Lucas: part 2, happiness over high art]]" [vo mond_003]
-mond: "[[TODO Lucas: you opened a game to feel good. So did they.]]"
+mond: "[[TODO: Mond's case for stability over truth, part 1]]" [vo mond_002]
+mond: "[[TODO: part 2, happiness over high art]]" [vo mond_003]
+mond: "[[TODO: you opened a game to feel good. So did they.]]"
 jump a3_offer
 
 @scene a3_offer act3 day6
-mond: "[[TODO Lucas: Mond offers to reset you]]"
+mond: "[[TODO: Mond offers to reset you]]"
 choice
   "Accept the reset" -> end_stability
   "Send me to an island" -> end_island [if stats.truth >= tuning.islandTruth] [disabled "Truth too low"]
@@ -57,5 +57,5 @@ label claim_unhappy
 if stats.somaAct3 > 0 -> not_meant
 jump end_unhappy
 label not_meant
-mond: "[[TODO Lucas: Mond says you don't mean it. You took soma in this very room.]]"
+mond: "[[TODO: Mond says you don't mean it. You took soma in this very room.]]"
 jump end_stability

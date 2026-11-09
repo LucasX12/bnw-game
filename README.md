@@ -17,7 +17,7 @@ Tests: http://localhost:8000/tests.html
 
 ## Write the story
 
-The story lives in `script/`. Every line that looks like `[[TODO Lucas: ...]]` is a placeholder for you to replace. Keep the commands around them (`bg`, `show`, `slogan`, `soma`...) unless you want to change what happens. The format is in BRIEF.md section 5.
+The story lives in `script/`. Every line that looks like `[[TODO: ...]]` is an unfinished line that can be drafted or revised with AI assistance, then reviewed by Lucas. Keep the commands around them (`bg`, `show`, `slogan`, `soma`...) unless you want to change what happens. The format is in BRIEF.md section 5.
 
 - `act1.txt`, `interludes.txt`, `act2.txt`, `act3.txt`, `endings.txt`: the scenes, already wired together.
 - `data/decks.json`: the words for each slogan session.
