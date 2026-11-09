@@ -1,5 +1,35 @@
 # Changelog
 
+## 2026-11-08: full art pack and event illustrations
+
+- Added the complete ChatGPT art pack (`ehn_complete.zip`): all 130 images in the manifest, none missing, none extra. 70 character sprites (14 expressions each for Lenina, Bernard, Helmholtz and John, 7 for Mond, plus Fanny, Henry, the Bokanovsky twins and a crowd), 35 backgrounds, 19 CGs and 6 interface images.
+- Converted to WebP: 260 MB down to 20.5 MB. Helmholtz's `special` sprite came back as a solid silhouette again, so it is redrawn as the faded, erased-from-the-Records outline.
+- All 19 CGs are staged in the script with `cg` commands at their moments: Lenina's welcome, the circle, the soma offer, the Community Sing, the smudged board, Lenina asleep, Helmholtz's poem, the empty chair, the drained circle, Bernard's letter, Lenina crying, John at the window, Mond's desk and safe, and one per ending. Only commands were added; no dialogue or TODO lines changed.
+- Pressing soma now clears any CG on screen too, since soma skips the rest of the scene.
+- Tests 85 of 85. Playthroughs to Stability, Island, Right to Be Unhappy and Perfect Citizen with no errors; 18 of 19 CGs seen on screen. Bernard's island CG needs a rarer route; the parser confirms its id.
+
+## 2026-11-08: music and sound effects (ElevenLabs)
+
+- All 7 music tracks and all 10 sound effects are in `assets/audio/`. Generated with ElevenLabs (Music v2.5 and Sound Effects v2) from the ASSETS.md prompts: 2 takes per music track, 4 per sound effect, best take kept.
+- Every loop is cut on the beat, so it repeats without a jump. The title theme plays its gentle intro once, then loops its fuller middle section, using the new optional `musicLoops` entry in the manifest (BRIEF section 10).
+- Levels evened out: one-shots trimmed and peak-limited, music levelled to the same loudness, ambiences kept quiet. Total audio size 5.2 MB.
+- The Voice and Mond voices are designed; their recorded lines come once Lucas picks the voices and writes Mond's speech.
+- Tests 85 of 85 (new: audio manifest checks). All files decode in Chrome at the expected lengths.
+
+## 2026-11-08: ready for the expanded art pack
+
+- New `cg` command and layer for full-screen event illustrations, saved and restored with the game.
+- 11 to 14 expressions per club member, 7 for Mond, plus new characters Fanny, Henry, the Bokanovsky twins and a crowd.
+- 25 new backgrounds (time of day, drained versions, the Singery, the Hatchery, the lift, dreamscapes and more), 19 CG slots and 5 interface images listed in `assets/manifest.json`. Everything shows a stand-in until its file arrives.
+- ASSETS_v2.md: the ChatGPT prompts for all 96 new images, in three batches.
+
+## 2026-11-08: Act 1 script draft (for Lucas's review)
+
+- Drafted all of Act 1 (7 scenes) and Lenina's night interlude. 14 lines quote the novel verbatim, each with its page number in a `# p.NN` comment.
+- Story split: Lucas writes Mond's speech, Helmholtz's poem and the four endings; the other scenes are drafted for his review.
+- AGENTS.md, BRIEF.md and ASSETS.md updated to match that split.
+- Script parses with no errors (71 TODO lines left). Tests 64 of 64; full playthrough to the Stability ending with no errors.
+
 ## 2026-11-08: art added (by Claude)
 
 - Added all 34 images from ChatGPT (`ehn_art.zip`): 23 character sprites, 10 backgrounds, 1 UI ornament. All files matched the asset contract: right names, right sizes, real transparency.

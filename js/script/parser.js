@@ -5,7 +5,7 @@ import { compile } from './expr.js';
 export const COMMANDS = new Set([
   'jump', 'if', 'set', 'add', 'bg', 'show', 'hide', 'move', 'music', 'detune', 'sfx', 'act', 'drain',
   'effect', 'soma', 'somaskip', 'slogan', 'inject', 'whisper', 'delete', 'review', 'interlude',
-  'endinterlude', 'terminal', 'stats', 'title', 'wait', 'skip', 'ending', 'checkpoint', 'day',
+  'endinterlude', 'terminal', 'stats', 'title', 'wait', 'skip', 'ending', 'checkpoint', 'day', 'cg',
 ]);
 const NO_ARGS = new Set(['endinterlude', 'checkpoint']);
 const POSITIONS = new Set(['far-left', 'left', 'center', 'right', 'far-right']);
@@ -259,6 +259,7 @@ export function parseScripts(files, opts = {}) {
         if (['show', 'hide', 'move', 'delete', 'review', 'interlude'].includes(n.name) && !known(n.args[0])) e(`Unknown character "${n.args[0]}"`);
         if (n.name === 'show' && n.args[1] && !knownExpr(n.args[0], n.args[1])) e(`"${n.args[0]}" has no expression "${n.args[1]}"`);
         if (n.name === 'bg' && !bgKnown(n.args[0])) w(`Background "${n.args[0]}" is not in assets/manifest.json`);
+        if (n.name === 'cg' && n.args[0] !== 'off' && manifest && !manifest.cg?.[n.args[0]]) w(`CG "${n.args[0]}" is not in assets/manifest.json`);
         if (n.name === 'ending' && !['stability', 'island', 'unhappy', 'citizen'].includes(n.args[0])) w(`Ending "${n.args[0]}" is not one of the four planned endings`);
       }
     }

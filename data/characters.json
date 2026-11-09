@@ -1,9 +1,13 @@
 {
-  "lenina":    { "name": "Lenina",    "record": "CROWNE, Lenina",    "caste": "Beta",         "tag": "#7A3558", "accent": "#F2B8C6", "scale": 1.00, "expressions": ["neutral", "happy", "worried", "upset", "special"] },
-  "bernard":   { "name": "Bernard",   "record": "MARX, Bernard",     "caste": "Alpha-Plus",   "tag": "#6E7179", "accent": "#C9CDD6", "scale": 0.93, "expressions": ["neutral", "happy", "worried", "upset", "special"] },
-  "helmholtz": { "name": "Helmholtz", "record": "WATSON, Helmholtz", "caste": "Alpha-Plus",   "tag": "#6E7179", "accent": "#F2C29B", "scale": 1.04, "expressions": ["neutral", "happy", "worried", "upset", "special"] },
-  "john":      { "name": "John",      "record": "JOHN",              "caste": "Unclassified", "tag": "#8A6A45", "accent": "#E9D7A6", "scale": 1.00, "expressions": ["neutral", "happy", "worried", "upset", "special"] },
-  "mond":      { "name": "Mond",      "record": "MOND, Mustapha",    "caste": "Controller",   "tag": "#2B2A33", "accent": "#E9D7A6", "scale": 1.00, "expressions": ["neutral", "smile", "cold"] },
-  "you":       { "name": "{name}",    "caste": "Beta-Plus",          "tag": "#7A3558", "sprite": false },
-  "voice":     { "name": "",          "caste": "",                   "tag": null,      "sprite": false }
+  "lenina": {"name": "Lenina", "record": "CROWNE, Lenina", "caste": "Beta", "tag": "#7A3558", "accent": "#F2B8C6", "scale": 1.0, "expressions": ["neutral", "happy", "worried", "upset", "special", "laugh", "sad", "angry", "surprised", "thinking", "embarrassed", "blank", "dreamy", "tearful_smile"]},
+  "bernard": {"name": "Bernard", "record": "MARX, Bernard", "caste": "Alpha-Plus", "tag": "#6E7179", "accent": "#C9CDD6", "scale": 0.93, "expressions": ["neutral", "happy", "worried", "upset", "special", "laugh", "sad", "angry", "surprised", "thinking", "embarrassed", "smug", "panicked", "bitter"]},
+  "helmholtz": {"name": "Helmholtz", "record": "WATSON, Helmholtz", "caste": "Alpha-Plus", "tag": "#6E7179", "accent": "#F2C29B", "scale": 1.04, "expressions": ["neutral", "happy", "worried", "upset", "special", "laugh", "sad", "angry", "surprised", "thinking", "embarrassed", "inspired", "defiant", "fading"]},
+  "john": {"name": "John", "record": "JOHN", "caste": "Unclassified", "tag": "#8A6A45", "accent": "#E9D7A6", "scale": 1.0, "expressions": ["neutral", "happy", "worried", "upset", "special", "laugh", "sad", "angry", "surprised", "thinking", "embarrassed", "furious", "lost", "gentle"]},
+  "mond": {"name": "Mond", "record": "MOND, Mustapha", "caste": "Controller", "tag": "#2B2A33", "accent": "#E9D7A6", "scale": 1.0, "expressions": ["neutral", "smile", "cold", "amused", "thoughtful", "stern", "weary"]},
+  "fanny": {"name": "Fanny", "record": "CROWNE, Fanny", "caste": "Beta", "tag": "#7A3558", "accent": "#F2B8C6", "scale": 0.98, "expressions": ["neutral", "happy", "worried"]},
+  "henry": {"name": "Henry", "record": "FOSTER, Henry", "caste": "Alpha-Plus", "tag": "#6E7179", "accent": "#C9CDD6", "scale": 1.04, "expressions": ["neutral", "happy"]},
+  "bokanovsky": {"name": "The Twins", "caste": "Gamma", "tag": "#3E8E5E", "scale": 1.0, "expressions": ["neutral"]},
+  "crowd": {"name": "Everyone", "caste": "", "tag": "#4A4852", "scale": 1.0, "expressions": ["neutral"]},
+  "you": {"name": "{name}", "caste": "Beta-Plus", "tag": "#7A3558", "sprite": false},
+  "voice": {"name": "", "caste": "", "tag": null, "sprite": false}
 }

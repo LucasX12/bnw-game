@@ -1,7 +1,7 @@
 // Music, sound effects and voice through Web Audio, so music can be detuned in Act 2.
 // Missing files are silent. Audio unlocks on the first click or key press.
 import { store } from '../store.js';
-import { audioSrc, missing } from '../assets.js';
+import { audioSrc, musicLoop, missing } from '../assets.js';
 
 let ctx = null; let master; let musicBus; let sfxBus; let voiceBus; let filter; let duck;
 const buffers = new Map();
@@ -56,6 +56,8 @@ export async function playMusic(id, fade = 800) {
   if (!buf || wanted?.id !== id || music?.id === id) return;
   const src = ctx.createBufferSource();
   src.buffer = buf; src.loop = true;
+  const lp = musicLoop(id);
+  if (lp && lp[1] <= buf.duration) { src.loopStart = lp[0]; src.loopEnd = lp[1]; }
   const g = ctx.createGain();
   g.gain.setValueAtTime(0, ctx.currentTime);
   g.gain.linearRampToValueAtTime(1, ctx.currentTime + fade / 1000);

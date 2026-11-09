@@ -41,10 +41,12 @@ jump a2_poem
 bg classroom_bright drain 2000
 show helmholtz worried center
 helmholtz worried: "[[TODO Lucas: Helmholtz says he wrote something real]]"
+cg cg_helmholtz_poem fade 1000
 "[[TODO Lucas: Helmholtz's poem, line 1]]" [noskip]
 "[[TODO Lucas: Helmholtz's poem, line 2]]" [noskip]
 "[[TODO Lucas: Helmholtz's poem, line 3]]" [noskip]
 "[[TODO Lucas: Helmholtz's poem, line 4]]" [noskip]
+cg off 800
 show lenina upset left
 lenina upset: "[[TODO Lucas: the room reacts]]" [sad]
 choice
@@ -69,14 +71,21 @@ detune 0.35
 show helmholtz special center
 "[[TODO Lucas: narration, something is wrong with Helmholtz]]" [corrupt 0.4]
 delete helmholtz
+cg cg_empty_chair fade 1200
+wait 2.5
+cg cg_circle_drained fade 1000
 show lenina happy left
 lenina happy: "[[TODO Lucas: Lenina doesn't remember Helmholtz. Ending is better than mending.]]"
 you: "[[TODO Lucas: you ask about him]]"
+cg off 800
 lenina special: "[[TODO Lucas: her smile is too wide]]" [sad]
 jump a2_bernard_panics
 label a2_helmholtz_gone_mended
 # Refreshing to escape lands here. He is still gone.
 delete helmholtz
+cg cg_empty_chair fade 1200
+wait 2
+cg off 800
 show lenina happy left
 lenina happy: "[[TODO Lucas: shorter, happier version for players who refreshed to escape]]"
 jump a2_bernard_panics
@@ -84,7 +93,9 @@ jump a2_bernard_panics
 @scene a2_bernard_panics act2 day5
 show bernard worried right
 review bernard
+cg cg_bernard_letter fade 900
 bernard worried: "[[TODO Lucas: Bernard has been threatened with Iceland]]" [sad]
+cg off 700
 bernard special: "[[TODO Lucas: he is desperate for your approval]]"
 if highest == bernard -> bernard_deleted
 bernard: "[[TODO Lucas: Bernard survives by turning on John]]"
@@ -102,8 +113,10 @@ soma auto
 show lenina happy left
 lenina happy: "[[TODO Lucas: everything is fine]]"
 "[[TODO Lucas: narration, something sad]]" [sad]
+cg cg_lenina_cry fade 900
 lenina worried: "[[TODO Lucas: a sad line the soma button tries to dose]]" [sad]
 "[[TODO Lucas: narration]]"
+cg off 800
 jump a2_john_soma
 
 @scene a2_john_soma act2 day5 noskip
@@ -113,8 +126,10 @@ music stop fade 2000
 show john upset center
 john upset: "[[TODO Lucas: John sees the soma being handed out]]"
 effect shake 400
+cg cg_john_window fade 300
 "[[TODO Lucas: narration, John throws the soma out of the window]]"
 john: "[[TODO Lucas: John's speech to the club]]"
+cg off 800
 lenina upset: "[[TODO Lucas: Lenina reaches for a gramme that isn't there]]" [sad]
 "[[TODO Lucas: narration, there is nothing to press]]"
 skip on

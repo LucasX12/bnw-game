@@ -2,7 +2,7 @@
 // The game must look intentional before the real art arrives.
 import { config } from './config.js';
 
-let manifest = { characters: {}, backgrounds: {}, music: {}, sfx: {}, voice: {}, ui: {} };
+let manifest = { characters: {}, backgrounds: {}, cg: {}, music: {}, sfx: {}, voice: {}, ui: {} };
 export const missing = new Set();
 
 export async function loadManifest() {
@@ -18,7 +18,13 @@ const path = (p) => (p ? `assets/${p}` : null);
 export const charSrc = (id, expr) => path(manifest.characters?.[id]?.[expr]);
 export const bgSrc = (id) => path(manifest.backgrounds?.[id]);
 export const hasBg = (id) => !!manifest.backgrounds?.[id];
+export const cgSrc = (id) => path(manifest.cg?.[id]);
 export const audioSrc = (kind, id) => path(manifest[kind]?.[id]);
+// Optional [loopStart, loopEnd] in seconds: the track plays its intro once, then loops that span.
+export const musicLoop = (id) => {
+  const lp = manifest.musicLoops?.[id];
+  return Array.isArray(lp) && lp.length === 2 && lp[1] > lp[0] ? lp : null;
+};
 
 // Loads src into img, falling back to placeholder if it fails. Resolves when something is showing.
 export function loadInto(img, src, placeholder) {
