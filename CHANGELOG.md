@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-09: drafting workflow
+
+- AI assistance is available for all story drafts and revisions, with Lucas reviewing the final text. Unfinished lines use `[[TODO: ...]]`.
+- Documentation and placeholder labels updated. No engine commands, scene structure or M1 to M5 acceptance criteria changed.
+
 ## 2026-11-08: engine built (by Claude)
 
 **Milestones M1 to M4 are complete. M5 is partly done: Controller Mode is cut (stubbed in `js/ui/controller.js`) and the site is not deployed yet.**
@@ -21,7 +26,7 @@ Built:
 - Web Audio music with crossfades and detune, sfx, voice with ducking, speech synthesis whispers.
 - Content warning, phone gate, file:// warning, script error screen, `?debug=1` panel.
 - Placeholder art for every character expression and background.
-- Full placeholder story skeleton: 25 scenes covering BRIEF.md section 3.1, 107 TODO lines for Lucas.
+- Full placeholder story skeleton: 25 scenes covering BRIEF.md section 3.1, 107 TODO lines.
 
 Tested in headless Chrome:
 - `tests.html`: 64 of 64 pass.
@@ -39,6 +44,6 @@ Changes from BRIEF.md (BRIEF.md has been updated to match):
 - Title menu also has "Load".
 
 Next:
-- Lucas: replace the `[[TODO` lines and the word decks; drop in the art and audio.
+- Replace the `[[TODO` lines and the word decks; drop in the art and audio.
 - Deploy to GitHub Pages.
 - Optional: Controller Mode (BRIEF 8.13).
