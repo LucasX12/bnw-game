@@ -1,6 +1,6 @@
 # ============================================================
 # ACT 1: Everybody's Happy Now (days 1 to 3)
-# Every [[TODO Lucas: ...]] line is a placeholder for you to write.
+# Every [[TODO: ...]] line is a placeholder for you to write.
 # Keep the commands (bg, show, slogan, soma...) unless you want to change what happens.
 # Format guide: BRIEF.md section 5.
 # ============================================================
@@ -9,83 +9,83 @@
 act 1
 bg dorm_night cut
 music night_ambience fade 1500
-voice: "[[TODO Lucas: first sleep-teaching whisper]]"
-voice: "[[TODO Lucas: second whisper]]"
-"[[TODO Lucas: narration, the first morning]]"
+voice: "[[TODO: first sleep-teaching whisper]]"
+voice: "[[TODO: second whisper]]"
+"[[TODO: narration, the first morning]]"
 jump a1_join
 
 @scene a1_join act1 day1
 bg classroom_bright fade 800
 music act1_loop fade 1200
 show lenina happy center
-lenina happy: "[[TODO Lucas: Lenina greets you as the new Beta-Plus]]"
-you: "[[TODO Lucas: your first reply]]"
+lenina happy: "[[TODO: Lenina greets you as the new Beta-Plus]]"
+you: "[[TODO: your first reply]]"
 choice
-  "[[TODO Lucas: warm option]]" -> join_warm [+lenina 1]
-  "[[TODO Lucas: cautious option]]" -> join_cautious [+bernard 1]
-  "[[TODO Lucas: curious option]]" -> join_curious [+helmholtz 1]
+  "[[TODO: warm option]]" -> join_warm [+lenina 1]
+  "[[TODO: cautious option]]" -> join_cautious [+bernard 1]
+  "[[TODO: curious option]]" -> join_curious [+helmholtz 1]
 end
 label join_warm
-lenina happy: "[[TODO Lucas: Lenina is delighted]]"
+lenina happy: "[[TODO: Lenina is delighted]]"
 jump join_meet
 label join_cautious
-lenina worried: "[[TODO Lucas: Lenina notices you hesitate]]"
+lenina worried: "[[TODO: Lenina notices you hesitate]]"
 jump join_meet
 label join_curious
-lenina: "[[TODO Lucas: Lenina answers your question]]"
+lenina: "[[TODO: Lenina answers your question]]"
 jump join_meet
 label join_meet
 move lenina left
 show bernard neutral right
-bernard: "[[TODO Lucas: Bernard introduces himself, a little defensive]]"
+bernard: "[[TODO: Bernard introduces himself, a little defensive]]"
 show helmholtz happy center
-helmholtz happy: "[[TODO Lucas: Helmholtz welcomes you to the Writing Circle]]"
-"[[TODO Lucas: narration, Mond passes the door]]"
+helmholtz happy: "[[TODO: Helmholtz welcomes you to the Writing Circle]]"
+"[[TODO: narration, Mond passes the door]]"
 show mond smile far-right
-mond smile: "[[TODO Lucas: Mond's one friendly line in Act 1]]"
+mond smile: "[[TODO: Mond's one friendly line in Act 1]]"
 hide mond
 jump a1_slogan1
 
 @scene a1_slogan1 act1 day1
-helmholtz: "[[TODO Lucas: Helmholtz explains the slogan session]]"
+helmholtz: "[[TODO: Helmholtz explains the slogan session]]"
 slogan day1
 show lenina neutral left
 show helmholtz neutral center
 show bernard neutral right
 if slogan.catchiness >= 60 -> s1_catchy
-lenina worried: "[[TODO Lucas: reaction to a weak slogan: {slogan.last}]]"
+lenina worried: "[[TODO: reaction to a weak slogan: {slogan.last}]]"
 jump s1_after
 label s1_catchy
-lenina happy: "[[TODO Lucas: reaction to a catchy slogan: {slogan.last}]]"
+lenina happy: "[[TODO: reaction to a catchy slogan: {slogan.last}]]"
 label s1_after
 if slogan.hasTruth -> s1_truth
 jump a1_soma_intro
 label s1_truth
-helmholtz happy: "[[TODO Lucas: Helmholtz quietly notices a true word]]"
+helmholtz happy: "[[TODO: Helmholtz quietly notices a true word]]"
 jump a1_soma_intro
 
 @scene a1_soma_intro act1 day2
 bg classroom_bright fade
 show lenina happy left
 show bernard upset right
-bernard upset: "[[TODO Lucas: the awkward moment with Bernard]]" [sad]
-lenina worried: "[[TODO Lucas: Lenina tries to smooth it over]]"
+bernard upset: "[[TODO: the awkward moment with Bernard]]" [sad]
+lenina worried: "[[TODO: Lenina tries to smooth it over]]"
 soma on
 somaskip a1_slogan2
-lenina happy: "[[TODO Lucas: Lenina offers you soma for the first time]]"
-"[[TODO Lucas: narration, the button appears]]"
-bernard worried: "[[TODO Lucas: Bernard keeps going]]" [sad]
+lenina happy: "[[TODO: Lenina offers you soma for the first time]]"
+"[[TODO: narration, the button appears]]"
+bernard worried: "[[TODO: Bernard keeps going]]" [sad]
 jump a1_slogan2
 
 @scene a1_slogan2 act1 day2
 show helmholtz neutral center
-helmholtz: "[[TODO Lucas: second session intro]]"
+helmholtz: "[[TODO: second session intro]]"
 slogan day2
 if slogan.hasShock -> s2_shock
-helmholtz: "[[TODO Lucas: reaction to your slogan: {slogan.last}]]"
+helmholtz: "[[TODO: reaction to your slogan: {slogan.last}]]"
 jump a1_community_sing
 label s2_shock
-lenina upset: "[[TODO Lucas: someone reacts to the word you were punished for]]"
+lenina upset: "[[TODO: someone reacts to the word you were punished for]]"
 jump a1_community_sing
 
 @scene a1_community_sing act1 day3
@@ -93,16 +93,16 @@ bg classroom_bright fade
 show lenina happy left
 show helmholtz neutral center
 show bernard neutral right
-lenina happy: "[[TODO Lucas: the club prepares for the Community Sing]]"
+lenina happy: "[[TODO: the club prepares for the Community Sing]]"
 slogan day3
-helmholtz: "[[TODO Lucas: Helmholtz reads your slogan aloud]]"
+helmholtz: "[[TODO: Helmholtz reads your slogan aloud]]"
 jump a1_glitch_mother
 
 @scene a1_glitch_mother act1 day3
 inject mother
 effect glitch 0.4 500
-"[[TODO Lucas: narration, your slogan on the board now reads: {slogan.last}]]"
-lenina upset: "[[TODO Lucas: Lenina flinches at the word]]" [sad]
-lenina happy: "[[TODO Lucas: then laughs it off]]"
-bernard worried: "[[TODO Lucas: Bernard noticed]]"
+"[[TODO: narration, your slogan on the board now reads: {slogan.last}]]"
+lenina upset: "[[TODO: Lenina flinches at the word]]" [sad]
+lenina happy: "[[TODO: then laughs it off]]"
+bernard worried: "[[TODO: Bernard noticed]]"
 jump n1_lenina
