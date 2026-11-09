@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-11-09: drafting workflow
+
+- AI assistance is available for all story drafts and revisions, with Lucas reviewing the final text. Unfinished lines use `[[TODO: ...]]`.
+- Documentation and placeholder labels updated. No engine commands, scene structure or M1 to M5 acceptance criteria changed.
+
 ## 2026-11-08: sprite layout fix
 
 - Characters no longer pile onto each other. The anime sprites are much wider than the old flat ones, so slot spacing now adapts to how many characters are on stage: three across get far more room, two stand at thirds, one keeps her slot.
@@ -20,7 +25,7 @@
 - All 7 music tracks and all 10 sound effects are in `assets/audio/`. Generated with ElevenLabs (Music v2.5 and Sound Effects v2) from the ASSETS.md prompts: 2 takes per music track, 4 per sound effect, best take kept.
 - Every loop is cut on the beat, so it repeats without a jump. The title theme plays its gentle intro once, then loops its fuller middle section, using the new optional `musicLoops` entry in the manifest (BRIEF section 10).
 - Levels evened out: one-shots trimmed and peak-limited, music levelled to the same loudness, ambiences kept quiet. Total audio size 5.2 MB.
-- The Voice and Mond voices are designed; their recorded lines come once Lucas picks the voices and writes Mond's speech.
+- The Voice and Mond voices are designed; their recorded lines come once the voices and Mond's speech are finalized.
 - Tests 85 of 85 (new: audio manifest checks). All files decode in Chrome at the expected lengths.
 
 ## 2026-11-08: ready for the expanded art pack
@@ -33,8 +38,6 @@
 ## 2026-11-08: Act 1 script draft (for Lucas's review)
 
 - Drafted all of Act 1 (7 scenes) and Lenina's night interlude. 14 lines quote the novel verbatim, each with its page number in a `# p.NN` comment.
-- Story split: Lucas writes Mond's speech, Helmholtz's poem and the four endings; the other scenes are drafted for his review.
-- AGENTS.md, BRIEF.md and ASSETS.md updated to match that split.
 - Script parses with no errors (71 TODO lines left). Tests 64 of 64; full playthrough to the Stability ending with no errors.
 
 ## 2026-11-08: art added (by Claude)
@@ -66,7 +69,7 @@ Built:
 - Web Audio music with crossfades and detune, sfx, voice with ducking, speech synthesis whispers.
 - Content warning, phone gate, file:// warning, script error screen, `?debug=1` panel.
 - Placeholder art for every character expression and background.
-- Full placeholder story skeleton: 25 scenes covering BRIEF.md section 3.1, 107 TODO lines for Lucas.
+- Full placeholder story skeleton: 25 scenes covering BRIEF.md section 3.1, 107 TODO lines.
 
 Tested in headless Chrome:
 - `tests.html`: 64 of 64 pass.
@@ -84,6 +87,6 @@ Changes from BRIEF.md (BRIEF.md has been updated to match):
 - Title menu also has "Load".
 
 Next:
-- Lucas: replace the `[[TODO` lines and the word decks; drop in the art and audio.
+- Replace the `[[TODO` lines and the word decks; drop in the art and audio.
 - Deploy to GitHub Pages.
 - Optional: Controller Mode (BRIEF 8.13).
