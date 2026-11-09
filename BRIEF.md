@@ -31,7 +31,7 @@ The player joins a student Writing Circle in the Department of Writing at the Co
 | Stack | Plain HTML, CSS, JavaScript ES modules. No build, no dependencies |
 | Stage | Fixed 1280 x 720 logical stage, scaled to fit the window with letterboxing |
 | Platforms | Laptop browsers (Chrome, Edge, Safari, Firefox). Phones see a gate screen |
-| Script | Screenplay-style text files written by Lucas (section 5) |
+| Script | Screenplay-style text files, with AI assistance available for drafting and revision (section 5) |
 | Saves | Autosave at every scene start plus 3 manual slots, in `localStorage` |
 | Meta tricks in v1 | Refresh detection, skip-mash warning, Records deletion, tab title + clock |
 | Art | Flat 1930s Art Deco, generated in ChatGPT, delivered as one zip (section 10) |
@@ -45,7 +45,7 @@ The player joins a student Writing Circle in the Department of Writing at the Co
 
 ## 3. Story logic the engine must support
 
-This section describes the structure the engine needs: acts, scenes, states and endings. Lucas writes Mond's speech, Helmholtz's poem and the four endings; the other scenes are drafted for his review. Dialogue leans on verbatim quotes from the novel, each marked with its page number in a `#` comment.
+This section describes the structure the engine needs: acts, scenes, states and endings. Any scene, poem, speech or ending may be drafted and revised with AI assistance for Lucas's review. Dialogue leans on verbatim quotes from the novel, each marked with its page number in a `#` comment.
 
 ### 3.1 Structure
 
@@ -65,7 +65,7 @@ This section describes the structure the engine needs: acts, scenes, states and 
 
 - **Day 2:** soma is offered for the first time and the soma button appears.
 - **Day 3:** a word the player never picked ("mother") appears inside their submitted slogan. Lenina is visibly uncomfortable at the word, as in the book (p. 118).
-- **Act 2, Helmholtz's poem:** Helmholtz reads a real poem about solitude (pp. 181 to 182). Lucas writes the poem.
+- **Act 2, Helmholtz's poem:** Helmholtz reads a real poem about solitude (pp. 181 to 182).
 - **Act 2, Helmholtz is gone:** `delete helmholtz` runs. His sprite is gone, his Records entry reads *Transferred*, and earlier saves become unloadable.
 - **Act 2, Bernard:** if Bernard has the highest affinity, he is deleted next. If not, he survives by turning on John. He is first threatened with Iceland (p. 98).
 - **Act 2, John:** John throws out the club's soma (p. 213). The soma button disappears for that one scene.
@@ -85,7 +85,7 @@ All endings set `global.endingsSeen[<id>] = true` and unlock Controller Mode if 
 
 The thresholds (8 and 3) live in `data/tuning.json`, not in code, so Lucas can adjust them after playtesting.
 
-### 3.3 Script budget for Lucas
+### 3.3 Script budget
 
 Guidance only.
 
@@ -155,7 +155,7 @@ bnw-game/
     debug.js            ?debug=1 panel and script error overlay
   script/
     index.json          ordered list of script files
-    act1.txt  act2.txt  act3.txt  interludes.txt  endings.txt   (Lucas)
+    act1.txt  act2.txt  act3.txt  interludes.txt  endings.txt
   data/
     characters.json     ids, display names, castes, tag colours, sprite scale
     decks.json          slogan builder word decks per session
@@ -326,18 +326,18 @@ act 1
 bg classroom_bright fade 600
 music act1_loop fade 1200
 show lenina happy center
-lenina happy: "[[TODO Lucas: Lenina greets you as the new Beta-Plus]]"
-you: "[[TODO Lucas: your reply]]"
+lenina happy: "[[TODO: Lenina greets you as the new Beta-Plus]]"
+you: "[[TODO: your reply]]"
 choice
-  "[[TODO Lucas: friendly option]]" -> join_friendly [+lenina 1]
-  "[[TODO Lucas: guarded option]]" -> join_guarded [+bernard 1]
+  "[[TODO: friendly option]]" -> join_friendly [+lenina 1]
+  "[[TODO: guarded option]]" -> join_guarded [+bernard 1]
 end
 label join_friendly
-lenina happy: "[[TODO Lucas: delighted response]]"
+lenina happy: "[[TODO: delighted response]]"
 jump a1_slogan1
 label join_guarded
 show bernard neutral right
-bernard worried: "[[TODO Lucas: Bernard notices you hesitate]]" [sad]
+bernard worried: "[[TODO: Bernard notices you hesitate]]" [sad]
 jump a1_slogan1
 ```
 
@@ -424,7 +424,7 @@ Name tag colours follow the caste colours in the book: Alphas wear grey, Gammas 
 ```json
 {
   "day1": {
-    "prompt": "[[TODO Lucas: session prompt]]",
+    "prompt": "[[TODO: session prompt]]",
     "minWords": 3, "maxWords": 7,
     "tiles": [
       { "w": "ending",  "syl": 2, "rhyme": "ending", "tags": ["comfort"] },
@@ -485,7 +485,7 @@ Opened by `slogan <deckId>`. Layout as in the mockup: header, a slot row of up t
   - Each `comfort` word adds `comfort`; each `truth` word adds `truth` (a negative number).
   - Each shock word adds `shock` (a negative number). Clamp to 0..100.
 - **Hidden effects on submit:** each tagged word adds 1 affinity to its owner (`comfort` to Lenina, `status` to Bernard, `truth` to Helmholtz, `shakespeare` to John). Each truth word adds 1 to `stats.truth`. Stored in `slogans[]`.
-- The reaction column shows each present club member's portrait. Their reaction lines come from Lucas's script after the session, branching on `slogan.*`, not from the builder.
+- The reaction column shows each present club member's portrait. Their reaction lines come from the script after the session, branching on `slogan.*`, not from the builder.
 - In Act 2, John's tiles are all `shakespeare` tiles and always score 0 Catchiness for him.
 
 ### 8.4 Shock words
@@ -738,7 +738,7 @@ The game must be fully playable on placeholders.
 
 ## 11. Milestones and acceptance criteria
 
-Five working days for the build, then one day for Lucas to drop in script and assets. Each milestone is one pull request.
+Five working days for the build, then one day to integrate script and assets. Each milestone is one pull request.
 
 ### M1: Engine skeleton (day 1)
 
@@ -782,7 +782,7 @@ Five working days for the build, then one day for Lucas to drop in script and as
 - Performance check: the title screen loads in under 3 s on a school laptop. Images load per scene, not all at boot.
 - GitHub Pages live from `main`, root folder. README explains how to run, write script, and swap assets.
 
-### Day 6 (Lucas)
+### Day 6: script and assets
 
 - Drop in `act1.txt` to `endings.txt` and `decks.json`; fix any parser errors shown.
 - Unzip the art and audio into `assets/`; check the debug panel for missing files.
