@@ -42,7 +42,7 @@ suite('Parser: line types');
   assert(n[4].options[0].aff.lenina === 2, 'affinity bracket');
   assert(n[4].options[1].cond && n[4].options[1].disabled === 'Too low', 'condition and disabled caption');
   assert(n[5].name === 'jump' && n[5].target === 'here', 'jump');
-  assert(parse('@scene a\n"[[TODO Lucas: x]]"\n"[[TODO Lucas: y]]"').todo === 2, 'TODO counter');
+  assert(parse('@scene a\n"[[TODO: x]]"\n"[[TODO: y]]"').todo === 2, 'TODO counter');
   const q = parse('@scene a\nlenina: "She said "hi" to me."', { characters: chars });
   assert(q.scenes.a.nodes[0].text === 'She said "hi" to me.', 'inner quotes kept');
 }

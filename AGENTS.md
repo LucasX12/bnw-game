@@ -4,7 +4,7 @@ This repo is *Everybody's Happy Now*, a browser visual novel based on Aldous Hux
 
 ## Hard rules
 
-1. **Do not write story text.** Lucas writes every line of dialogue, narration, whisper, poem and ending text himself. When a scene needs words, insert a placeholder in the exact form `[[TODO Lucas: what this line should do]]`. The only exception is the fixed UI copy listed in BRIEF.md section 9.4. Do not "improve", reword or extend anything Lucas has written in `/script`.
+1. **Lucas has the final say on story text.** AI assistance may be used to draft and revise any part of the game, including dialogue, narration, whispers, poems, Mond's speech and all four endings. Lucas reviews the final story text. Use `[[TODO: ...]]` for unfinished lines. Quotes from the novel stay verbatim, with their page number in a `#` comment above the line.
 2. **Plain web stack only.** HTML, CSS and JavaScript ES modules. No build step, no bundler, no npm packages, no frameworks, no TypeScript, no JavaScript from CDNs. Google Fonts `<link>` tags are the only external requests allowed.
 3. **Relative paths everywhere.** The site is served from `https://<user>.github.io/bnw-game/`, so a leading `/` breaks it. Keep a `.nojekyll` file at the repo root.
 4. **Content stays out of code.** Story lives in `/script/*.txt`, data in `/data/*.json`, media in `/assets/` listed in `assets/manifest.json`. Engine code never hard-codes a line of story, a character's stats or an asset path.
