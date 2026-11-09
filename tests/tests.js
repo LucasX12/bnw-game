@@ -5,6 +5,8 @@ import { scoreSlogan } from '../js/ui/slogan.js';
 import { isLocked } from '../js/store.js';
 import { wasRefreshedMidScene } from '../js/meta/refresh.js';
 import { loadManifest, musicLoop, audioSrc } from '../js/assets.js';
+import { config } from '../js/config.js';
+import * as sprites from '../js/stage/sprites.js';
 
 const out = document.getElementById('out');
 let pass = 0; let fail = 0; let list = null;
@@ -173,6 +175,30 @@ suite('Audio manifest');
     const r = await fetch(audioSrc('sfx', id), { method: 'HEAD' });
     assert(r.ok, `sound effect ${id} is present`);
   }
+}
+
+suite('Sprite layout');
+{
+  config.characters = await (await fetch('data/characters.json')).json();
+  if (!document.getElementById('sprites')) { const d = document.createElement('div'); d.id = 'sprites'; d.hidden = true; document.body.appendChild(d); }
+  sprites.clear();
+  sprites.show('lenina', 'happy', 'left');
+  assert(sprites.slotX().left === 360, 'one character keeps her own slot');
+  sprites.show('bernard', 'happy', 'center');
+  sprites.show('john', 'neutral', 'right');
+  let x = sprites.slotX();
+  assert(x.right - x.center >= 390 && x.center - x.left >= 390, 'three across spread out so wide sprites do not pile up');
+  sprites.show('helmholtz', 'worried', 'center');
+  const l = sprites.list();
+  assert(!l.some((s) => s.id === 'bernard'), 'a new character in an occupied slot replaces the one standing there');
+  assert(new Set(l.map((s) => s.pos)).size === l.length, 'never two characters in the same slot');
+  sprites.focus('lenina');
+  const z = Object.fromEntries(sprites.images().map((im) => [im.dataset.char, im.style.zIndex]));
+  assert(z.lenina === '2' && z.helmholtz === '1', 'the speaker is drawn in front');
+  sprites.hide('helmholtz', 'cut');
+  x = sprites.slotX();
+  assert(x.left === 400 && x.right === 880, 'two left standing move to thirds');
+  sprites.clear();
 }
 
 document.getElementById('sum').innerHTML = `<b class="${fail ? 'fail' : 'pass'}">${pass} passed, ${fail} failed</b>`;
