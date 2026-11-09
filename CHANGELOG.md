@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-08: sprite layout fix
+
+- Characters no longer pile onto each other. The anime sprites are much wider than the old flat ones, so slot spacing now adapts to how many characters are on stage: three across get far more room, two stand at thirds, one keeps her slot.
+- One character per slot: showing someone in an occupied slot fades out whoever stood there. Before, Bernard could be stuck invisibly behind Helmholtz in Act 2.
+- The speaker is drawn in front of the others, so a shoulder never covers whoever is talking.
+- Tests 91 of 91 (new: sprite layout checks).
+
 ## 2026-11-08: full art pack and event illustrations
 
 - Added the complete ChatGPT art pack (`ehn_complete.zip`): all 130 images in the manifest, none missing, none extra. 70 character sprites (14 expressions each for Lenina, Bernard, Helmholtz and John, 7 for Mond, plus Fanny, Henry, the Bokanovsky twins and a crowd), 35 backgrounds, 19 CGs and 6 interface images.
